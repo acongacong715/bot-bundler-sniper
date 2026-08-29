@@ -1,0 +1,51 @@
+{
+  "name": "bot-bundler-sniper",
+  "version": "1.0.0",
+  "description": "Advanced Solana Bot Bundler + Sniper with Token Creation, Atomic Bundling, Auto-Selling & Wallet Management",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "solana",
+    "bot",
+    "bundler",
+    "sniper",
+    "trading",
+    "token",
+    "jito"
+  ],
+  "author": "acongacong715",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@solana/spl-token": "^0.4.8",
+    "@project-serum/anchor": "^0.29.0",
+    "@jito-foundation/searcher-client": "^0.1.0",
+    "axios": "^1.7.0",
+    "web3-storage": "^4.5.11",
+    "arweave": "^1.15.0",
+    "bullmq": "^5.13.0",
+    "sqlite3": "^5.1.7",
+    "crypto-js": "^4.2.0",
+    "tweepy": "^4.14.0",
+    "node-telegram-bot-api": "^0.63.0",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.0",
+    "pino": "^8.17.0",
+    "pino-pretty": "^10.3.1",
+    "tweeter": "^0.0.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/crypto-js": "^4.2.2",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
