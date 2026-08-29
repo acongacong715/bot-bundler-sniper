@@ -1,0 +1,147 @@
+/**
+ * Application Constants
+ * All constant values used throughout the application
+ */
+
+// NETWORKS & RPC
+export const NETWORKS = {
+  MAINNET: 'mainnet',
+  DEVNET: 'devnet',
+  TESTNET: 'testnet',
+};
+
+export const LAMPORTS_PER_SOL = 1_000_000_000;
+
+// PROGRAM IDS
+export const PROGRAM_IDS = {
+  PUMP_FUN: process.env.PUMP_FUN_PROGRAM_ID || '6EF8rrecthR5Dkzon8Nwu78hRvfCMsES',
+  SYSTEM_PROGRAM: '11111111111111111111111111111111',
+  TOKEN_PROGRAM: 'TokenkegQfeZyiNwAJsyFbPVwwQQfoza1CN6sSooooo',
+  ASSOCIATED_TOKEN_PROGRAM: 'ATokenGPvbdGVqstVQmcLsNZAqeEctipwTYEmqKjbqa',
+  RENT_PROGRAM: 'SysvarRent111111111111111111111111111111111',
+  CLOCK_PROGRAM: 'SysvarC1ock11111111111111111111111111111111',
+};
+
+// TRANSACTION SETTINGS
+export const TX_SETTINGS = {
+  PRIORITY_FEE_LAMPORTS: 100000,
+  MAX_RETRIES: 3,
+  CONFIRMATION_TIMEOUT: 30000,
+  POLLING_INTERVAL: 1000,
+};
+
+// SNIPING SETTINGS
+export const SNIPE_SETTINGS = {
+  DEFAULT_BUY_AMOUNT_SOL: 0.1,
+  DEFAULT_SLIPPAGE_BPS: 9900,
+  MAX_SLIPPAGE_BPS: 10000,
+  MIN_SLIPPAGE_BPS: 0,
+  MAX_WALLET_COUNT: 50,
+  MIN_WALLET_COUNT: 1,
+  DEFAULT_WALLET_COUNT: 3,
+  MAX_CONCURRENT_TX: 10,
+};
+
+// SELLING SETTINGS
+export const SELL_SETTINGS = {
+  STRATEGIES: ['market', 'limit', 'mixed'],
+  DEFAULT_STRATEGY: 'mixed',
+  DEFAULT_TAKE_PROFIT_PERCENT: 100,
+  DEFAULT_STOP_LOSS_PERCENT: 20,
+  DEFAULT_DRIP_PERCENT: 25,
+  DEFAULT_DRIP_INTERVAL_SECONDS: 30,
+};
+
+// RATE LIMITS
+export const RATE_LIMITS = {
+  RPC_CALLS_PER_SECOND: 100,
+  TRANSACTION_BROADCAST_DELAY_MS: 100,
+  API_RATE_LIMIT_REQUESTS_PER_MINUTE: 60,
+};
+
+// RETRY SETTINGS
+export const RETRY_SETTINGS = {
+  MAX_RETRIES: 5,
+  INITIAL_BACKOFF_MS: 1000,
+  MAX_BACKOFF_MS: 30000,
+  BACKOFF_MULTIPLIER: 2,
+};
+
+// DATABASE
+export const DATABASE = {
+  PATH: process.env.DATABASE_PATH || './data/bot.db',
+  TABLES: {
+    WALLETS: 'wallets',
+    TRANSACTIONS: 'transactions',
+    TOKENS: 'tokens',
+    PERFORMANCE: 'performance',
+    SETTINGS: 'settings',
+  },
+};
+
+// FILE PATHS
+export const FILE_PATHS = {
+  KEYS_DIR: './keys',
+  DATA_DIR: './data',
+  LOGS_DIR: './logs',
+  BACKUP_DIR: './backups',
+};
+
+// TIME CONSTANTS
+export const TIME = {
+  MS_PER_SECOND: 1000,
+  SECONDS_PER_MINUTE: 60,
+  MINUTES_PER_HOUR: 60,
+  HOURS_PER_DAY: 24,
+  DAYS_PER_WEEK: 7,
+};
+
+// ERROR MESSAGES
+export const ERRORS = {
+  INVALID_PUBKEY: 'Invalid public key format',
+  INVALID_KEYPAIR: 'Invalid keypair format',
+  INVALID_AMOUNT: 'Invalid SOL amount',
+  INVALID_SLIPPAGE: 'Slippage must be between 0 and 10000 BPS',
+  INSUFFICIENT_BALANCE: 'Insufficient balance',
+  TRANSACTION_FAILED: 'Transaction failed',
+  NETWORK_ERROR: 'Network connection error',
+  INVALID_CONFIGURATION: 'Invalid configuration',
+  ENCRYPTION_ERROR: 'Encryption/Decryption error',
+};
+
+// ENVIRONMENT VALIDATION
+export const ENV_REQUIRED = [
+  'SOLANA_RPC_MAINNET',
+  'MAIN_WALLET_KEYPAIR',
+  'VAULT_ENCRYPTION_KEY',
+];
+
+export const ENV_OPTIONAL = [
+  'SOLANA_RPC_DEVNET',
+  'JITO_ENDPOINT',
+  'TWITTER_API_KEY',
+  'TELEGRAM_BOT_TOKEN',
+];
+
+// CACHE SETTINGS
+export const CACHE = {
+  EXPIRE_TIME_MS: 60000,
+  CLEANUP_INTERVAL_MS: 300000,
+};
+
+export default {
+  NETWORKS,
+  PROGRAM_IDS,
+  TX_SETTINGS,
+  SNIPE_SETTINGS,
+  SELL_SETTINGS,
+  RATE_LIMITS,
+  RETRY_SETTINGS,
+  DATABASE,
+  FILE_PATHS,
+  TIME,
+  ERRORS,
+  ENV_REQUIRED,
+  ENV_OPTIONAL,
+  CACHE,
+};
